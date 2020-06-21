@@ -1,0 +1,4 @@
+/target
+Cargo.lock
+/ncurses-sys/target
+/ncurses-sys/Cargo.lock
