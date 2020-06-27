@@ -14,16 +14,12 @@ fn main() {
         //wrapper.h contains the headers necessary for 
         //generating ncurses bindings
         .header("wrapper.h")
-        //I've no idea what this does but the example told me to so I did
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         //Generate the Bindings
         .generate()
         //Handle Errors
         .expect("Unable to generate bindings");
 
-    //Put the bindings in a place that is hard to reach because CARGO
-    let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
     bindings
-        .write_to_file(out_path.join("bindings.rs"))
+        .write_to_file("src/raw.rs")
         .expect("Couldn't write bindings!");
 }

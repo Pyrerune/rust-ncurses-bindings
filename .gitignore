@@ -1,4 +1,6 @@
 /target
 Cargo.lock
+.idea
 /ncurses-sys/target
 /ncurses-sys/Cargo.lock
+/ncurses-sys/.idea
